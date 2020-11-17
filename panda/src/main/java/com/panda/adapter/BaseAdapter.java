@@ -103,7 +103,7 @@ public abstract class BaseAdapter<Bean,V extends ViewDataBinding> extends Recycl
 
     @Override
     public VH<V> onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(getLayoutId(viewType),null);
+        View v = LayoutInflater.from(parent.getContext()).inflate(getLayoutId(viewType),parent,false);
         return new VH(v);
     }
 

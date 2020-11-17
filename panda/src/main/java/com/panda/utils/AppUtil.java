@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.os.Looper;
 
 import com.panda.Constants;
 
@@ -71,6 +72,12 @@ public class AppUtil {
         return sn;
     }*/
 
+    /**
+     * 判断某个应用是否安装
+     * @param context
+     * @param packageName
+     * @return
+     */
     public static boolean isInstall(Context context, String packageName) {
         final PackageManager packageManager = context.getPackageManager();
         List<PackageInfo> pinfo = packageManager.getInstalledPackages(0);
@@ -83,4 +90,14 @@ public class AppUtil {
         }
         return pName.contains(packageName);
     }
+
+    /**
+     * 判断当前线程是否为主线程
+     * @return true-是 false-否
+     */
+    public static boolean isMainThread() {
+        return Looper.getMainLooper() == Looper.myLooper();
+    }
+
+
 }

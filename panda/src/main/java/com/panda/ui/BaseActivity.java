@@ -21,7 +21,7 @@ public abstract class BaseActivity<T extends ViewDataBinding> extends AppCompatA
     protected T mViewBind;
 
     protected Context mContext;
-    protected boolean mfullScreen = true; //是否全屏
+    protected boolean mfullScreen = false; //是否全屏
 
 
     protected abstract int getLayoutId();

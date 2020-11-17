@@ -13,9 +13,6 @@ public class Constants {
     public static boolean isShow = true;                        //Toast
     public static Context appContext ;                          //Toast
     public static Handler mainHandler=new Handler(Looper.getMainLooper());
-    public static final String TAG ="AIVoice";                  //通用tag
 
-
-    public static final String  FLAVOR_XIAOHA="s_t_semantic";//小哈
 
 }
